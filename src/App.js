@@ -1,7 +1,15 @@
-import React from "react";
-import "./style.css";
+import React, { useReducer } from 'react';
+import './style.css';
+
+    const initialState = {x:0}
+
+    function reducer() {
+      return{x:999}
+    }
+   
 
 export default function App() {
+  const [state, dispatch] = useReducer(reducer, initialState); 
   return (
     <div>
       <h1>counter : ?</h1>
