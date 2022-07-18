@@ -4,12 +4,26 @@ import './style.css';
 const initialState = { x: 0 };
 
 function reducer(state = initialState, action) {
-  console.log(action);
-  if (action.type === '+') return { x: state.x + 1 };
-  if (action.type === '-') return { x: state.x - 1 };
-  if (action.type === '0') return { x: 0 };
-  if (action.type === '1000') return { x: 1000 };
-  if (action.type === '2000') return { x: 2000 };
+ Switch(action.type)
+{
+    case "+":
+       return { x: state.x + 1 }
+    case "-": 
+    return { x: state.x - 1 }
+    case "0": 
+    return { x: 0 }
+    case "1000":
+       return { x: 1000 }
+    case "2000":
+       return { x: 2000 }
+      default: 
+      return state     
+}
+  if (action.type === '+') 
+  if (action.type === '-') 
+  if (action.type === '0') 
+  if (action.type === '1000') 
+  if (action.type === '2000') 
   return state;
 }
 
